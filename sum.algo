@@ -1,0 +1,37 @@
+ALGORITHM problem_1
+VAR
+    T1,T2 : ARRAY_OF INTEGER[20];
+    Sum : INTEGER:0;
+    i,j:INTEGER; 
+    s: BOOLEAN:
+BEGIN
+S:= false;
+    FOR i FROM 0 TO T1.lenght step 1 DO
+        write("enter elements of array 1")
+        read(T1[i])
+    END_FOR
+    FOR j FROM 0 TO T2.lenght step 1 DO
+    write("enter elements of array 2")
+        read(T2[j])
+        END_FOR
+        FOR i FROM 0 TO T1.lenght step 1 DO
+        FOR j FROM 0 TO T2.lenght step 1 DO
+        IF (T1[i]) = T2[j] THEN
+        write("write the element are equal")
+        s:= true;
+        END_IF
+        IF (T1[i] <> T2[j])  THEN
+            Sum := Sum +T1[i]
+        END_IF
+        END_FOR
+        END_FOR
+        FOR j FROM 0 TO T2.lenght step 1 DO
+        FOR i FROM 0 TO T1.lenght step 1 DO
+            IF (T1[j] = T1[i]) THEN
+                wwrite("write the element are equal")
+                S:= true;
+            END_IF
+        END_FOR
+            
+
+END

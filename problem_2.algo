@@ -1,0 +1,54 @@
+FUNCTION dot_product (v1,v2: ARRAY_OF INTEGER) : INTEGER
+VAR
+    i,dott:INTEGER 
+BEGIN
+   dott:=0;
+   i:=0;
+    IF (v1.lenght<> v2.lenght) THEN
+    write ("the vectors are not equals")
+    END_IF
+    REPEAT
+        dott:= dott + v1 [i] * v2[i] ;
+        i:=i+1;
+    UNTIL (i>v1.lenght)
+    RETURN dott;
+END 
+PROCEDURE dot_product(v1,v2: ARRAY_OF INTEGER)
+VAR
+    i,dott:INTEGER 
+BEGIN
+    dott:=0;
+    i:=0;
+    IF (v1.lenght<> v2.lenght) THEN
+    write ("the vectors are not equals")
+    END_IF
+    REPEAT
+        dott:= dott + v1 [i] * v2[i] ;
+        i:=i+1;
+    UNTIL (i>v1.lenght)
+    RETURN dott;
+END
+ALGORITHM Dot product
+ VAR
+ v1,v2:ARRAY_OF INTEGER 
+ dott:INTEGER
+ i,j:INTEGER
+ BEGIN
+
+FOR i FROM 0 TO v1.lenght STEP 1 DO;
+ write ("add the elemnt of the array v1")
+ REAd(v1[i])
+END FOR 
+FOR J FROM 0 TO v2.lenght STEP 1 DO;
+ write ("add the elemnt of the array v2")
+ REAd(v2[i])
+END FOR
+// insert the elements in the array 
+dott:=dot_product(v1,v2)
+// insert the PROCEDURE 
+IF dott:=0 THEN
+  write ("V1 et V2 are not orthogonal")
+  ELSE
+   write(" v1 et v2 are orthogonal")
+   END_IF
+   END
